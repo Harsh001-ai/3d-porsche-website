@@ -1,62 +1,80 @@
-# Porsche 911 GT3 RS — Cinematic Scroll-Animated Hero Section
+# Porsche 911 GT3 RS (Type 992) — Dark Cinematic Luxury Automotive Experience
 
-A cinematic, scroll-driven interactive automotive website built around the provided 240-frame 1920×1080 Porsche 911 GT3 RS footage.
-
----
-
-## 🏎 Technical Architecture & Frame Scrubbing Rationale
-
-### Why Canvas Frame-Sequence Scrubbing Over Standard `<video>`?
-1. **Zero-Latency Seeking**: HTML5 `<video>` scrubbing on browsers relies on keyframe decoding, introducing 100ms–300ms delays, stutter, and skipped frames during user scrolling (especially reverse scrolling and rapid wheel flicks).
-2. **Apple & Automotive Gold Standard**: High-end automotive and hardware product sites (Apple, Porsche, Rimac) use high-performance `<canvas>` rendering driven by `requestAnimationFrame`.
-3. **Flawless Bi-Directional Scrubbing**: Forward scrolling advances camera motion; reverse scrolling reverses playback instantaneously at 60–120 FPS.
-4. **Retina Display Scaling**: Physical pixel density scaling (`devicePixelRatio`) prevents blurriness while retaining edge-to-edge cinematic framing.
+A dark cinematic luxury automotive web experience built around the Porsche 911 GT3 RS (Type 992). The application combines a 240-frame 4K/1080p scroll-driven canvas sequence with verified Weissach engineering, an interactive 360° vehicle turntable, driver cockpit rotary dials, Nordschleife sector telemetry, and an allocation consultation desk.
 
 ---
 
-## 🚀 How to Run the Project
+## 🏎 Live Architecture & Design System
 
-1. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
+- **Hero Canvas (`HeroScrollCanvas.jsx`)**:
+  - High-performance 240-frame `<canvas>` scrubbed with **GSAP ScrollTrigger** (`scrub: 0.6`).
+  - Native pixel ratio scaling (`devicePixelRatio`) and bidirectional inertial playback at 60–120 FPS.
+  - Interactive timeline scrubber (`001` to `240`) and automated cinematic tour preview.
 
-2. **Start Development Server**:
-   ```bash
-   npm run dev
-   ```
-   Open `http://localhost:5173` in your browser.
+- **Dark Cinematic Luxury Design System**:
+  - **Obsidian Black (`#050505`)**: Clean deep ground with zero muddy grey tones.
+  - **Graphite (`#111318`)**: Restrained hairline panels (`border-white/10`) with zero generic glassmorphism blobs.
+  - **Warm Ivory (`#E8E6E1`)**: Editorial typography via **Syncopate** and **Space Grotesk**.
+  - **Muted Technical Grey (`#9A9FA8`)**: Technical data and coordinates in **JetBrains Mono**.
+  - **Motorsport Red (`#DC2626` / `#EF4444`)**: Focused aerodynamic active indicators.
 
-3. **Build for Production**:
-   ```bash
-   npm run build
-   ```
+- **Web Audio Flat-6 Synthesizer (`soundEngine.js`)**:
+  - Web Audio API procedural synthesis of an atmospheric 4.0L Boxer-6 engine with dynamic pitch and resonance linked to user scroll speed.
 
 ---
 
-## 🛠 Key Features Implemented
+## 🏁 Experience Flow (Scenes A – G)
 
-1. **Scroll-Driven Canvas Hero (`HeroScrollCanvas.jsx`)**:
-   - Pinned 400vh scroll track powered by **GSAP ScrollTrigger**.
-   - Scrub smoothing interpolation (`scrub: 0.6`) for fluid mouse-wheel inertia.
-   - Non-intrusive art direction: Opening frame 1 preserves the footage's built-in 3D 911 numerals and spec graphics without obstruction.
-   - 4 Dynamic Scrollytelling Phases:
-     - **Phase 1 (0–18%)**: Pristine lateral profile & heritage specs.
-     - **Phase 2 (18–52%)**: Camera push-in into aerodynamic flank, louvres, and center-lock red wheels with active DRS card.
-     - **Phase 3 (52–78%)**: Orbit around swan-neck carbon wing with 4.0L atmospheric 9,000 RPM boxer engine stats.
-     - **Phase 4 (78–100%)**: Centered rear stance showcasing the 6:49.328 Nürburgring Nordschleife record.
-   - Manual interactive timeline scrubber bar (`001` to `240`) and automated "Cinematic Tour" preview button.
-2. **Web Audio API Flat-6 Engine Synthesizer (`soundEngine.js`)**:
-   - Generates authentic 6-cylinder atmospheric boxer acoustic harmonics.
-   - Modulates pitch, filter cutoff, and resonance dynamically with user scroll velocity.
-3. **Aerodynamics Section (`AerodynamicsSection.jsx`)**:
-   - Deep-dive into 860 kg downforce at 285 km/h, hydraulic DRS, single center-radiator concept, and teardrop aerofoil suspension arms.
-4. **Performance Section (`PerformanceSection.jsx`)**:
-   - Interactive 9,000 RPM analog-digital tachometer with interactive "Hold to Rev" capability.
-   - Metric (PS / km/h) & Imperial (HP / mph) toggle.
-5. **Circuit Telemetry (`TelemetrySection.jsx`)**:
-   - Official certified lap times (Nürburgring 6:49.328, Road America 2:13.820, Silverstone 2:03.210) and full technical parameters.
-6. **Bespoke Visualizer & Configurator (`VisualizerSection.jsx`)**:
-   - Exterior paint finishes, wheel finishes, and package switcher with multi-angle previews and consultation reservation modal.
-7. **Production Automotive Footer (`Footer.jsx`)**:
-   - Official WLTP fuel consumption and emissions compliance disclosure.
+1. **Scene A — The Transition Bridge (`TransitionBridge.jsx`)**: Seamless architectural exit from the 3D hero into Weissach development telemetry.
+2. **Scene B — The Signature Specification (`SignatureShowcase.jsx`)**: Asymmetrical vehicle stage with instant camera focus vectors (Swan-Neck DRS Wing, Front Louvres, Pyro Red Magnesium Wheels, Aero Stance & Central Diffuser).
+3. **Scene C — Performance Dossier (`EngineeringNarrative.jsx`)**: 3-chapter verified breakdown:
+   - 4.0L Atmospheric Flat-6 @ 9,000 RPM (525 PS / 465 Nm).
+   - Single Central Radiator concept (-15 kg structural weight reduction).
+   - Continuous Variable Downforce (860 kg @ 285 km/h).
+4. **Scene D — Exterior Craftsmanship Gallery (`CraftsmanshipGallery.jsx`)**: Asymmetrical 5-tile editorial inspection with high-res modals.
+5. **Interactive 360° Vehicle Exploration (`InteractiveOrbitalViewer.jsx`)**: Horizontal drag-to-rotate canvas turntable with camera vector presets (0°, 45°, 90°, 135°, 180°), zoom, and reset.
+6. **Design Manifesto (`DesignPhilosophy.jsx`)**: Andreas Preuninger principles ("No styling lines. Every surface exists solely because the air demands it.").
+7. **Scene E — Cockpit Ergonomics (`CockpitExperience.jsx`)**: Interactive 4-rotary dial steering wheel workstation: DRS, PASM suspension damping, PTV+ differential lock, and ESC/TC 7-stage slip control.
+8. **Scene F — Nordschleife Telemetry & Cinematic Moment (`TrackTelemetry.jsx` & `CinematicMoment.jsx`)**: Sector breakdown of the official 6:49.328 lap record followed by a full-bleed downforce stance visual.
+9. **Scene G — Allocation Desk & Legal Footer (`FinalCTA.jsx` & `Footer.jsx`)**: Request consultation modal dialog, direct JSON technical dossier export, and official WLTP fuel consumption disclosures.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18+)
+- npm
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/Harsh001-ai/3d-porsche-website.git
+
+# Navigate into project directory
+cd 3d-porsche-website
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+The site will be available at `http://localhost:5173`.
+
+### Production Build
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## 📋 Technology Stack
+- **Framework**: React 19 + Vite 6
+- **Styling**: Tailwind CSS v4 (`@tailwindcss/vite`)
+- **Animation & Scrollytelling**: GSAP 3 + ScrollTrigger
+- **Audio Engine**: Web Audio API Procedural Synthesizer
+- **Icons**: Lucide React
+- **Typography**: Syncopate, Space Grotesk, JetBrains Mono
