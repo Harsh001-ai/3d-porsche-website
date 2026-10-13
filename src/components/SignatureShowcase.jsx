@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowUpRight, Crosshair, ShieldCheck, Zap } from 'lucide-react';
+import { getAssetPath } from '../utils/assetPath';
 
 export default function SignatureShowcase() {
   const [activeAeroPoint, setActiveAeroPoint] = useState('wing');
@@ -12,7 +13,7 @@ export default function SignatureShowcase() {
       subtitle: 'REAR DOWNFORCE DYNAMICS',
       detail: 'Towering 1.5-meter wide two-stage carbon wing extending higher than the car roof. The hydraulic upper blade adjusts between low-drag speed mode and a vertical 34° airbrake within 0.3 seconds.',
       stat: '409 KG @ 200 KM/H',
-      frame: '/frames/ezgif-frame-190.jpg',
+      frame: getAssetPath('/frames/ezgif-frame-190.jpg'),
       crop: 'center 45%',
       badge: 'DRS AIRBRAKE CAPABLE',
     },
@@ -23,7 +24,7 @@ export default function SignatureShowcase() {
       subtitle: 'LATERAL PRESSURE EVACUATION',
       detail: 'Carbon slats above the front wheels reduce air pressure built up by rotating wheels, stabilizing front axle contact pressure and preventing vehicle lift under extreme cornering.',
       stat: '29 MM TRACK INCREASE',
-      frame: '/frames/ezgif-frame-075.jpg',
+      frame: getAssetPath('/frames/ezgif-frame-075.jpg'),
       crop: 'center 50%',
       badge: 'CFRP PRESSURE RELIEF',
     },
@@ -34,7 +35,7 @@ export default function SignatureShowcase() {
       subtitle: 'UNSPRUNG ROTATIONAL MASS',
       detail: 'Finished in iconic Pyro Red with single motorsport center-lock nut. 20-inch front and 21-inch rear wheels wrapped in Michelin Pilot Sport Cup 2 R track compounds.',
       stat: '-8 KG UNSPRUNG MASS',
-      frame: '/frames/ezgif-frame-150.jpg',
+      frame: getAssetPath('/frames/ezgif-frame-150.jpg'),
       crop: 'center 55%',
       badge: 'MAGNESIUM WEISSACH',
     },
@@ -45,7 +46,7 @@ export default function SignatureShowcase() {
       subtitle: 'VENTURI GROUND EFFECT',
       detail: 'Engineered for uninterrupted high-speed downforce. Dual titanium exhaust outlets framed by an aggressive rear diffuser generating immense low-pressure suction under the vehicle floor.',
       stat: '860 KG @ 285 KM/H',
-      frame: '/frames/ezgif-frame-220.jpg',
+      frame: getAssetPath('/frames/ezgif-frame-220.jpg'),
       crop: 'center 50%',
       badge: 'TITANIUM & VENTURI',
     },

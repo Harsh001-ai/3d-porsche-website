@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Gauge, Cpu, Flame, Wind, ArrowRight, Activity, Zap } from 'lucide-react';
+import { getAssetPath } from '../utils/assetPath';
 
 export default function EngineeringNarrative() {
   const [activeChapter, setActiveChapter] = useState(0);
@@ -20,7 +21,7 @@ export default function EngineeringNarrative() {
         { label: 'Max Torque', value: '465 Nm @ 6,300 rpm' },
         { label: 'Specific Output', value: '131.4 PS / Litre' },
       ],
-      image: '/frames/ezgif-frame-150.jpg',
+      image: getAssetPath('/frames/ezgif-frame-150.jpg'),
       imagePosition: 'center',
     },
     {
@@ -38,7 +39,7 @@ export default function EngineeringNarrative() {
         { label: 'Roof Guide Fins', value: 'Prevents warm air entering rear intake' },
         { label: 'Brake Ducts', value: 'Dedicated lateral air channels' },
       ],
-      image: '/frames/ezgif-frame-075.jpg',
+      image: getAssetPath('/frames/ezgif-frame-075.jpg'),
       imagePosition: 'center',
     },
     {
@@ -56,7 +57,7 @@ export default function EngineeringNarrative() {
         { label: 'DRS Actuation', value: 'Hydraulic steering-wheel trigger' },
         { label: 'Airbrake Function', value: 'Automatic emergency deceleration' },
       ],
-      image: '/frames/ezgif-frame-190.jpg',
+      image: getAssetPath('/frames/ezgif-frame-190.jpg'),
       imagePosition: 'center',
     },
   ];

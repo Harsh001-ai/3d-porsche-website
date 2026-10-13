@@ -10,7 +10,9 @@ const TOTAL_FRAMES = 240;
 
 const getFramePath = (index) => {
   const frameNum = String(index + 1).padStart(3, '0');
-  return `/frames/ezgif-frame-${frameNum}.jpg`;
+  const base = import.meta.env.BASE_URL || '/';
+  const cleanBase = base.endsWith('/') ? base : `${base}/`;
+  return `${cleanBase}frames/ezgif-frame-${frameNum}.jpg`;
 };
 
 export default function HeroScrollCanvas() {

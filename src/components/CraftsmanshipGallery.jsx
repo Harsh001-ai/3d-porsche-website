@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Eye, Maximize2, Shield, Sparkles, X, ChevronRight } from 'lucide-react';
+import { getAssetPath } from '../utils/assetPath';
 
 export default function CraftsmanshipGallery() {
   const [activeModalItem, setActiveModalItem] = useState(null);
@@ -9,7 +10,7 @@ export default function CraftsmanshipGallery() {
       id: 'rear-wing',
       title: 'Swan-Neck DRS Carbon Wing',
       category: 'ACTIVE AERODYNAMICS',
-      frame: '/frames/ezgif-frame-160.jpg',
+      frame: getAssetPath('/frames/ezgif-frame-160.jpg'),
       aspect: 'col-span-1 lg:col-span-8 row-span-2 min-h-[420px]',
       cropPosition: 'center 40%',
       summary: 'Engineered taller than the roofline to operate in clean, undisturbed airflow. Hydraulic rams pivot the upper carbon blade continuously between high downforce and low-drag DRS mode.',
@@ -19,7 +20,7 @@ export default function CraftsmanshipGallery() {
       id: 'wheels-brakes',
       title: 'Pyro Red Center-Lock Forged Wheels',
       category: 'UNSPRUNG ROTATIONAL MASS',
-      frame: '/frames/ezgif-frame-095.jpg',
+      frame: getAssetPath('/frames/ezgif-frame-095.jpg'),
       aspect: 'col-span-1 lg:col-span-4 min-h-[300px]',
       cropPosition: '45% 65%',
       summary: 'Lightweight forged magnesium wheels saving 8 kg of unsprung mass. Paired with 410 mm front Porsche Ceramic Composite Brakes (PCCB) clamped by 6-piston monobloc calipers.',
@@ -29,7 +30,7 @@ export default function CraftsmanshipGallery() {
       id: 'roof-fins',
       title: 'Roof Aerofoil Guide Fins',
       category: 'THERMAL FLUID DYNAMICS',
-      frame: '/frames/ezgif-frame-130.jpg',
+      frame: getAssetPath('/frames/ezgif-frame-130.jpg'),
       aspect: 'col-span-1 lg:col-span-4 min-h-[300px]',
       cropPosition: 'center 30%',
       summary: 'Twin black aerofoil fins mounted along the carbon roof divide air exiting the central radiator, channeling warm air outward to preserve ambient cold air density for the rear engine intake.',
@@ -39,7 +40,7 @@ export default function CraftsmanshipGallery() {
       id: 'diffuser-exhaust',
       title: 'Titanium Sport Exhaust & Diffuser',
       category: 'ACOUSTICS & UNDERBODY FLOW',
-      frame: '/frames/ezgif-frame-235.jpg',
+      frame: getAssetPath('/frames/ezgif-frame-235.jpg'),
       aspect: 'col-span-1 lg:col-span-6 min-h-[320px]',
       cropPosition: 'center 85%',
       summary: 'Dual centrally positioned thin-walled titanium exhaust pipes delivering an unfiltered atmospheric 9,000 RPM flat-6 acoustic signature, framed by a functional carbon underbody diffuser.',
@@ -49,7 +50,7 @@ export default function CraftsmanshipGallery() {
       id: 'front-louvres',
       title: 'Front Wheel Arch Carbon Louvres',
       category: 'PRESSURE EQUALIZATION',
-      frame: '/frames/ezgif-frame-070.jpg',
+      frame: getAssetPath('/frames/ezgif-frame-070.jpg'),
       aspect: 'col-span-1 lg:col-span-6 min-h-[320px]',
       cropPosition: '30% 60%',
       summary: 'Motorsport slats integrated into the front wings alleviate wheel arch overpressure at high speeds, directly reducing front-axle aerodynamic lift and stabilizing steering feedback.',

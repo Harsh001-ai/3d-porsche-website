@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import { getAssetPath } from '../utils/assetPath';
 
 export default function CinematicMoment() {
   return (
@@ -7,7 +8,7 @@ export default function CinematicMoment() {
       {/* Cinematic Full-Bleed Imagery */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/frames/ezgif-frame-240.jpg"
+          src={getAssetPath('/frames/ezgif-frame-240.jpg')}
           alt="Porsche 911 GT3 RS Centered Rear Downforce Stance"
           className="w-full h-full object-cover object-center filter brightness-60 contrast-110"
         />

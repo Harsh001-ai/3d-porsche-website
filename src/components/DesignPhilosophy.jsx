@@ -1,5 +1,6 @@
 import React from 'react';
 import { Layers, Wind, Shield, ArrowUpRight } from 'lucide-react';
+import { getAssetPath } from '../utils/assetPath';
 
 export default function DesignPhilosophy() {
   return (
@@ -41,7 +42,7 @@ export default function DesignPhilosophy() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 rounded-2xl overflow-hidden border border-white/10 aspect-video relative group bg-black">
             <img
-              src="/frames/ezgif-frame-190.jpg"
+              src={getAssetPath('/frames/ezgif-frame-190.jpg')}
               alt="Aerodynamic Airflow Channels"
               className="w-full h-full object-cover filter brightness-95 group-hover:scale-105 transition-all duration-700"
               style={{ objectPosition: 'center 45%' }}
