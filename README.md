@@ -1,5 +1,7 @@
 # Porsche 911 GT3 RS (Type 992) — Dark Cinematic Luxury Automotive Experience
 
+> **🌐 Live Deployment**: [https://harsh001-ai.github.io/3d-porsche-website/](https://harsh001-ai.github.io/3d-porsche-website/)
+
 A dark cinematic luxury automotive web experience built around the Porsche 911 GT3 RS (Type 992). The application combines a 240-frame 4K/1080p scroll-driven canvas sequence with verified Weissach engineering, an interactive 360° vehicle turntable, driver cockpit rotary dials, Nordschleife sector telemetry, and an allocation consultation desk.
 
 ---
