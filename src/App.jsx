@@ -15,7 +15,7 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#08090c] text-[#eaecee] selection:bg-red-600 selection:text-white antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-[#050505] text-[#eaecee] selection:bg-red-600 selection:text-white antialiased overflow-x-hidden">
       {/* Fixed Luxury Navigation */}
       <Navbar />
 

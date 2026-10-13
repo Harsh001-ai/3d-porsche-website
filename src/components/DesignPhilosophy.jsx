@@ -3,7 +3,7 @@ import { Layers, Wind, Shield, ArrowUpRight } from 'lucide-react';
 
 export default function DesignPhilosophy() {
   return (
-    <section id="philosophy" className="relative w-full bg-[#08090c] py-28 px-6 md:px-12 lg:px-20 border-t border-white/5 overflow-hidden">
+    <section id="philosophy" className="relative w-full bg-[#050505] py-28 px-6 md:px-12 lg:px-20 border-t border-white/5 overflow-hidden">
       <div className="max-w-7xl mx-auto space-y-24">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -11,17 +11,17 @@ export default function DesignPhilosophy() {
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-red-500 block mb-2">
               06 — DESIGN MANIFESTO
             </span>
-            <h2 className="font-syncopate text-3xl sm:text-5xl font-bold uppercase tracking-tight text-white">
+            <h2 className="font-syncopate text-3xl sm:text-5xl font-bold uppercase tracking-tight text-[#E8E6E1]">
               AERODYNAMIC <span className="text-red-500">PHILOSOPHY</span>
             </h2>
           </div>
-          <p className="font-mono text-xs text-zinc-400 max-w-md">
+          <p className="font-mono text-xs text-[#9A9FA8] max-w-md">
             Three core principles engineered into every carbon-fibre composite panel of the 911 GT3 RS.
           </p>
         </div>
 
         {/* THEME 01: Full-Width Editorial Quote & Functional Directness */}
-        <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-[#0d0f14] p-8 md:p-16">
+        <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-[#111318] p-8 md:p-16">
           <div className="max-w-3xl space-y-6">
             <span className="font-mono text-xs text-red-500 uppercase tracking-widest block">
               PRINCIPLE 01 // PURITY OF INTENT
@@ -39,12 +39,12 @@ export default function DesignPhilosophy() {
 
         {/* THEME 02: Split Composition — Aerodynamic Negative Space & CFD Fluid Dynamics */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-7 rounded-2xl overflow-hidden border border-white/10 aspect-video relative group">
+          <div className="lg:col-span-7 rounded-2xl overflow-hidden border border-white/10 aspect-video relative group bg-black">
             <img
-              src="/frames/ezgif-frame-070.jpg"
+              src="/frames/ezgif-frame-190.jpg"
               alt="Aerodynamic Airflow Channels"
               className="w-full h-full object-cover filter brightness-95 group-hover:scale-105 transition-all duration-700"
-              style={{ objectPosition: '30% 60%' }}
+              style={{ objectPosition: 'center 45%' }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end font-mono text-xs text-white">

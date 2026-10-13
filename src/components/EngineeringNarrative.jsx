@@ -20,7 +20,7 @@ export default function EngineeringNarrative() {
         { label: 'Max Torque', value: '465 Nm @ 6,300 rpm' },
         { label: 'Specific Output', value: '131.4 PS / Litre' },
       ],
-      image: '/frames/ezgif-frame-001.jpg',
+      image: '/frames/ezgif-frame-150.jpg',
       imagePosition: 'center',
     },
     {
@@ -38,8 +38,8 @@ export default function EngineeringNarrative() {
         { label: 'Roof Guide Fins', value: 'Prevents warm air entering rear intake' },
         { label: 'Brake Ducts', value: 'Dedicated lateral air channels' },
       ],
-      image: '/frames/ezgif-frame-070.jpg',
-      imagePosition: 'left center',
+      image: '/frames/ezgif-frame-075.jpg',
+      imagePosition: 'center',
     },
     {
       id: 'aero',
@@ -56,7 +56,7 @@ export default function EngineeringNarrative() {
         { label: 'DRS Actuation', value: 'Hydraulic steering-wheel trigger' },
         { label: 'Airbrake Function', value: 'Automatic emergency deceleration' },
       ],
-      image: '/frames/ezgif-frame-160.jpg',
+      image: '/frames/ezgif-frame-190.jpg',
       imagePosition: 'center',
     },
   ];
@@ -64,7 +64,7 @@ export default function EngineeringNarrative() {
   const current = chapters[activeChapter];
 
   return (
-    <section id="engineering" className="relative w-full bg-[#090b0e] py-28 px-6 md:px-12 lg:px-20 border-t border-white/5 overflow-hidden">
+    <section id="engineering" className="relative w-full bg-[#050505] py-28 px-6 md:px-12 lg:px-20 border-t border-white/5 overflow-hidden">
       {/* Precision grid backdrop */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
 

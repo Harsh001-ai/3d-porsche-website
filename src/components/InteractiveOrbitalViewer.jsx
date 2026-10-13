@@ -16,7 +16,7 @@ export default function InteractiveOrbitalViewer() {
   const startFrameRef = useRef(0);
   const isVisibleRef = useRef(false);
 
-  const [currentFrame, setCurrentFrame] = useState(0);
+  const [currentFrame, setCurrentFrame] = useState(74);
   const [zoomLevel, setZoomLevel] = useState(1);
   const [activeLivery, setActiveLivery] = useState('pyroRed');
   const [activeHotspot, setActiveHotspot] = useState(null);
@@ -29,10 +29,10 @@ export default function InteractiveOrbitalViewer() {
   };
 
   const anglePresets = [
-    { label: 'Profile (0°)', frame: 0, angle: '0°' },
-    { label: 'Front Flank (45°)', frame: 60, angle: '45°' },
-    { label: 'Aero 3/4 Flank (90°)', frame: 120, angle: '90°' },
-    { label: 'Rear Orbit (135°)', frame: 175, angle: '135°' },
+    { label: 'Profile (0°)', frame: 74, angle: '0°' },
+    { label: 'Aero 3/4 Flank (45°)', frame: 120, angle: '45°' },
+    { label: 'Rear Flank (90°)', frame: 160, angle: '90°' },
+    { label: 'Rear Downforce (135°)', frame: 190, angle: '135°' },
     { label: 'Rear Command (180°)', frame: 239, angle: '180°' },
   ];
 
@@ -146,7 +146,7 @@ export default function InteractiveOrbitalViewer() {
   const currentAngleDegrees = Math.round((currentFrame / (TOTAL_ORBIT_FRAMES - 1)) * 180);
 
   return (
-    <section id="interactive-3d" ref={containerRef} className="relative w-full bg-[#090b0e] py-28 px-6 md:px-12 lg:px-20 border-t border-white/5 overflow-hidden">
+    <section id="interactive-3d" ref={containerRef} className="relative w-full bg-[#050505] py-28 px-6 md:px-12 lg:px-20 border-t border-white/5 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -154,11 +154,11 @@ export default function InteractiveOrbitalViewer() {
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-red-500 block mb-2">
               05 — 360° ORBITAL INSPECTION
             </span>
-            <h2 className="font-syncopate text-3xl sm:text-5xl font-bold uppercase tracking-tight text-white">
+            <h2 className="font-syncopate text-3xl sm:text-5xl font-bold uppercase tracking-tight text-[#E8E6E1]">
               INTERACTIVE <span className="text-red-500">EXPLORATION</span>
             </h2>
           </div>
-          <div className="font-mono text-xs text-zinc-400 max-w-md">
+          <div className="font-mono text-xs text-[#9A9FA8] max-w-md">
             <span>Direct vehicle inspection. Drag horizontally across the vehicle or select preset camera vectors.</span>
           </div>
         </div>
